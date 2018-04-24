@@ -1,0 +1,12 @@
+C:\Users\jshed\source\repos\Clarksons.CTrade.DataAccess\JSCloud.LogPlayer\bin\Debug\JSCloud.LogPlayer.dll
+C:\Users\jshed\source\repos\Clarksons.CTrade.DataAccess\JSCloud.LogPlayer\bin\Debug\JSCloud.LogPlayer.pdb
+C:\Users\jshed\source\repos\Clarksons.CTrade.DataAccess\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.csproj.CoreCompileInputs.cache
+C:\Users\jshed\source\repos\Clarksons.CTrade.DataAccess\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.dll
+C:\Users\jshed\source\repos\Clarksons.CTrade.DataAccess\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.pdb
+C:\Users\jshed\source\repos\Clarksons.CTrade.DataAccess\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.csprojResolveAssemblyReference.cache
+C:\Users\jshed\source\repos\JSCloud.LogPlayer\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.csprojResolveAssemblyReference.cache
+C:\Users\jshed\source\repos\JSCloud.LogPlayer\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.csproj.CoreCompileInputs.cache
+C:\Users\jshed\source\repos\JSCloud.LogPlayer\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.dll
+C:\Users\jshed\source\repos\JSCloud.LogPlayer\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.pdb
+C:\Users\jshed\source\repos\JSCloud.LogPlayer\JSCloud.LogPlayer\bin\Debug\JSCloud.LogPlayer.dll
+C:\Users\jshed\source\repos\JSCloud.LogPlayer\JSCloud.LogPlayer\bin\Debug\JSCloud.LogPlayer.pdb
