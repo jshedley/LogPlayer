@@ -28,7 +28,7 @@ public class ChangeLog<I> where I:struct
 ```
 The above information allows the implementation to know the order logs to be replayed in, and more importantly gives meta data associated with that object, which is used during the implementation for retrival.
 
-##Storage
+## Storage
 
 Any storage of the data can be implemented. The code uploaded currently contains a MicrosoftSQL implementation, which is build from the interface ```IStore```, which is found within the implementation.
 
