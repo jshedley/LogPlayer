@@ -48,4 +48,10 @@ The performance is subject to the hardware running the tests on, the below stats
 | Bulk loading 100 changes into the IStore | 183ms | ```MicrosoftSqlStore``` implementation
 | Load 100 changes from the IStore | 63ms | ```MicrosoftSqlStore``` implementation
 | Inserting a single change into the IStore | 6ms | ```MicrosoftSqlStore``` implementation
+| Bulk loading 100 changes into the IStore | 17ms | ```InMemoryStore``` implementation
+| Load 100 changes from the IStore | 17ms | ```InMemoryStore``` implementation
+| Inserting a single change into the IStore | 0ms | ```InMemoryStore``` implementation
+| Bulk loading 100 changes into the IStore | 122ms | ```InMemoryStore.BaseSqlServerStore``` implementation
+| Load 100 changes from the IStore | 17ms | ```InMemoryStore.BaseSqlServerStore``` implementation
+| Inserting a single change into the IStore | 7ms | ```InMemoryStore.BaseSqlServerStore``` implementation
 
