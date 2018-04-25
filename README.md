@@ -40,6 +40,7 @@ The performance is subject to the hardware running the tests on, the below stats
 > O/S: 10.0.16299 Build 16299
 > Memory :  16,309 MB
 > HDD: SAMSUNG MZFLW512HMJP-000MV - 512GB
+
 | Test Description | Execution Time | Notes
 | ---------------- | :-------------: | ----- |
 | Replay 5,000 log entries | 30ms | |
