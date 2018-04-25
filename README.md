@@ -35,6 +35,11 @@ Any storage of the data can be implemented. The code uploaded currently contains
 The ```IStore``` has a method called ```Provision``` which will create the storage container for holding the logs for the given Object(s). The implementation of the MicrosoftSQL (```MicrosoftSqlStore```) in its constructor allows for the Table and Schema to be specified. The ```Provision``` method will use those variables to create a table capabale of holding the Audit Logs. It is possible to store multiple objects logs in the table, and this is done internally by the implementation, but it effectively seperates them by storing the ```FullTypeName``` of the object being stored in the AuditLog.
 
 ## Performance
+The performance is subject to the hardware running the tests on, the below stats are basis:
+> Processor: Intel64 Family 6 Model 142 Stepping 10 GenuineIntel ~1910 Mhz
+> O/S: 10.0.16299 Build 16299
+> Memory :  16,309 MB
+> HDD: SAMSUNG MZFLW512HMJP-000MV - 512GB
 | Test Description | Execution Time | Notes
 | ---------------- | :-------------: | ----- |
 | Replay 5,000 log entries | 30ms | |
