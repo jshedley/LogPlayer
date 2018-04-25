@@ -11,13 +11,15 @@ using System.Threading.Tasks;
 namespace JSCloud.LogPlayer.Tests
 {
     [TestFixture]
-    public class LogApplyerIntegrationMicrosoftSqlStoreTests : LogApplyerIntegrationTests
+    public class LogApplyerIntegrationInMemoryStoreWithSqlBaseStore: LogApplyerIntegrationTests
     {
         private static string _uid = DateTime.UtcNow.Ticks.ToString();
+        private MicrosoftSqlStore<int> baseStore = new MicrosoftSqlStore<int>($"server=.;database=LogPlayer_{_uid};trusted_connection=true;", $"dbo", $"TBL_{_uid}");
 
-        public LogApplyerIntegrationMicrosoftSqlStoreTests()
+
+        public LogApplyerIntegrationInMemoryStoreWithSqlBaseStore()
         {
-            this.Store = new MicrosoftSqlStore<int>($"server=.;database=LogPlayer_{_uid};trusted_connection=true;", $"dbo", $"TBL_{_uid}");   
+            this.Store = new InMemoryStore<int>(baseStore);
         }
               
         

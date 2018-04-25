@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JSCloud.LogPlayer.Store
 {
-    public interface IStore<I> where I:struct
+    public interface IStore<I> where I:struct, IComparable<I>
     {
         /// <summary>
         /// Stores a single change log item
@@ -29,7 +29,7 @@ namespace JSCloud.LogPlayer.Store
         /// for this type coming back.*</param>
         /// <param name="fullTypeName">The full name of the type to get the changes for.</param>
         /// <returns></returns>
-        Task<ICollection<Types.ChangeLog<I>>> GetChangesAsync(int? objectId, string fullTypeName);
+        Task<ICollection<Types.ChangeLog<I>>> GetChangesAsync(I? objectId, string fullTypeName);
 
         /// <summary>
         /// Provision the data store

@@ -10,10 +10,10 @@ using JSCloud.LogPlayer.Types;
 namespace JSCloud.LogPlayer.Store
 {
     public class MicrosoftSqlStore<I> : IStore<I>
-        where I:struct
+        where I:struct, IComparable<I>
     {
 
-        private string _select => $"select * from [{_tableSchema}].[{_tableName}] where FullTypeName = @fullTypeName";
+        private string _select => $"select * from [{_tableSchema}].[{_tableName}] where ";
         private string _insert => $"insert into [{_tableSchema}].[{_tableName}] select @changeLogId, @ObjectId, @fullTypeName, @propertySystemType, @property, @value, @changedBy, @ChangedUtc";
         private string _createTable => $"IF OBJECT_ID(N'{_tableSchema}.{_tableName}', N'U') IS NULL \n" +
             $"BEGIN \n" +
@@ -43,7 +43,7 @@ namespace JSCloud.LogPlayer.Store
            _commandTimeout = commandTimeout;
         }
 
-        public async Task<ICollection<ChangeLog<I>>> GetChangesAsync(int? objectId, string fullTypeName)
+        public async Task<ICollection<ChangeLog<I>>> GetChangesAsync(I? objectId, string fullTypeName)
         {
             ICollection<ChangeLog<I>> changes = new LinkedList<ChangeLog<I>>();
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -60,14 +60,21 @@ namespace JSCloud.LogPlayer.Store
                         command.CommandType = System.Data.CommandType.Text;
                         if (objectId.HasValue)
                         {
-                            command.CommandText = $"{_select} AND ObjectId = @objectId";
+                            command.CommandText = $"{_select} FullTypeName = @fullTypeName  AND ObjectId = @objectId";
                             command.Parameters.Add(new SqlParameter("fullTypeName", fullTypeName));
                             command.Parameters.Add(new SqlParameter("objectId", objectId));
                         }
                         else
                         {
-                            command.CommandText = _select;
-                            command.Parameters.Add(new SqlParameter("fullTypeName", fullTypeName));
+                            if (string.IsNullOrEmpty(fullTypeName))
+                            {
+                                command.CommandText = $"{_select} 1 = 1 ";
+                            }
+                            else
+                            {
+                                command.CommandText = $"{_select} FullTypeName = @fullTypeName ";
+                                command.Parameters.Add(new SqlParameter("fullTypeName", fullTypeName));
+                            }
                         }
                         
                         command.CommandTimeout = _commandTimeout;
@@ -136,10 +143,10 @@ namespace JSCloud.LogPlayer.Store
 
                     }
                 }
-                catch(Exception)
+                catch(Exception ex)
                 {
                     changeLog.ChangeLogId = null;
-                    throw;
+                    throw new Exception("Unable to store change.", ex);
                 }
                 finally
                 {
