@@ -44,24 +44,21 @@ The performance is subject to the hardware running the tests on, the below stats
 ### SQL Store
 | Test | Execution Time |
 | ------------ | ------------ |
-| Test Description | Execution Time |
-| Inserting 1000 into store | 27ms |
+| Inserting 1000 into store | 23ms |
 | Inserting a single into store | 5ms |
-| Getting all for type | 33ms |
+| Getting all for type | 31ms |
 | Getting single item | 2ms |
 ### InMemoryStore - No Base Store
 | Test | Execution Time |
 | ------------ | ------------ |
-| Test Description | Execution Time |
-| Inserting 1000 into store | 0ms |
+| Inserting 1000 into store | 1ms |
 | Inserting a single into store | 0ms |
-| Getting all for type | 1ms |
-| Getting single item | 0ms |
+| Getting all for type | 3ms |
+| Getting single item | 1ms |
 ### InMemoryStore - With SQL Base Store
 | Test | Execution Time |
 | ------------ | ------------ |
-| Test Description | Execution Time |
-| Inserting 1000 into store | 29ms |
-| Inserting a single into store | 5ms |
-| Getting all for type | 3ms |
+| Inserting 1000 into store | 26ms |
+| Inserting a single into store | 4ms |
+| Getting all for type | 1ms |
 | Getting single item | 3ms |
