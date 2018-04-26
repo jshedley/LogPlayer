@@ -102,9 +102,6 @@ namespace JSCloud.LogPlayer.TestHarness
 
             Stopwatch timer = new Stopwatch();
 
-            if (outputStats)
-                Console.WriteLine("| Test Description | Execution Time |");
-
             timer.Start();
             store.StoreAsync(items).GetAwaiter().GetResult();
             timer.Stop();

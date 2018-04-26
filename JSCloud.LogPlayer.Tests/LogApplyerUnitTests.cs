@@ -7,6 +7,7 @@ using NUnit.Framework;
 namespace JSCloud.LogPlayer.Tests
 {
     [TestFixture]
+    [Category("UnitTests")]
     public class LogApplyerUnitTests
     {
         [TestCase(1, "2", 3, null, null, TestName =

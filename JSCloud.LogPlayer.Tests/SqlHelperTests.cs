@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace JSCloud.LogPlayer.Tests
 {
     [TestFixture]
+    [Category("UnitTests")]
     public class SqlHelperTests
     {
 
