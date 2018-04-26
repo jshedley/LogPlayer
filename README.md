@@ -41,17 +41,27 @@ The performance is subject to the hardware running the tests on, the below stats
 > Memory :  16,309 MB
 > HDD: SAMSUNG MZFLW512HMJP-000MV - 512GB
 
-| Test Description | Execution Time | Notes
-| ---------------- | :-------------: | ----- |
-| Replay 5,000 log entries | 30ms | |
-| Comparing 2 objects to determine the Changes | 4ms | |
-| Bulk loading 100 changes into the IStore | 183ms | ```MicrosoftSqlStore``` implementation
-| Load 100 changes from the IStore | 63ms | ```MicrosoftSqlStore``` implementation
-| Inserting a single change into the IStore | 6ms | ```MicrosoftSqlStore``` implementation
-| Bulk loading 100 changes into the IStore | 17ms | ```InMemoryStore``` implementation
-| Load 100 changes from the IStore | 17ms | ```InMemoryStore``` implementation
-| Inserting a single change into the IStore | 0ms | ```InMemoryStore``` implementation
-| Bulk loading 100 changes into the IStore | 122ms | ```InMemoryStore.BaseSqlServerStore``` implementation
-| Load 100 changes from the IStore | 17ms | ```InMemoryStore.BaseSqlServerStore``` implementation
-| Inserting a single change into the IStore | 7ms | ```InMemoryStore.BaseSqlServerStore``` implementation
-
+### SQL Store
+| Test | Execution Time |
+| ------------ | ------------ |
+| Test Description | Execution Time |
+| Inserting 1000 into store | 27ms |
+| Inserting a single into store | 5ms |
+| Getting all for type | 33ms |
+| Getting single item | 2ms |
+### InMemoryStore - No Base Store
+| Test | Execution Time |
+| ------------ | ------------ |
+| Test Description | Execution Time |
+| Inserting 1000 into store | 0ms |
+| Inserting a single into store | 0ms |
+| Getting all for type | 1ms |
+| Getting single item | 0ms |
+### InMemoryStore - With SQL Base Store
+| Test | Execution Time |
+| ------------ | ------------ |
+| Test Description | Execution Time |
+| Inserting 1000 into store | 29ms |
+| Inserting a single into store | 5ms |
+| Getting all for type | 3ms |
+| Getting single item | 3ms |
