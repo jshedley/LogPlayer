@@ -10,3 +10,9 @@ C:\Users\jshed\source\repos\JSCloud.LogPlayer\JSCloud.LogPlayer\obj\Debug\JSClou
 C:\Users\jshed\source\repos\JSCloud.LogPlayer\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.pdb
 C:\Users\jshed\source\repos\JSCloud.LogPlayer\JSCloud.LogPlayer\bin\Debug\JSCloud.LogPlayer.dll
 C:\Users\jshed\source\repos\JSCloud.LogPlayer\JSCloud.LogPlayer\bin\Debug\JSCloud.LogPlayer.pdb
+C:\Users\jshed\source\repos\LogPlayer\JSCloud.LogPlayer\bin\Debug\JSCloud.LogPlayer.dll
+C:\Users\jshed\source\repos\LogPlayer\JSCloud.LogPlayer\bin\Debug\JSCloud.LogPlayer.pdb
+C:\Users\jshed\source\repos\LogPlayer\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.csprojResolveAssemblyReference.cache
+C:\Users\jshed\source\repos\LogPlayer\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.csproj.CoreCompileInputs.cache
+C:\Users\jshed\source\repos\LogPlayer\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.dll
+C:\Users\jshed\source\repos\LogPlayer\JSCloud.LogPlayer\obj\Debug\JSCloud.LogPlayer.pdb

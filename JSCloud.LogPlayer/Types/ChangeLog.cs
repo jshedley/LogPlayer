@@ -7,8 +7,23 @@ using System.Threading.Tasks;
 namespace JSCloud.LogPlayer.Types
 {
     public class ChangeLog<I>
-        where I:struct
+        where I : struct
     {
+
+        public ChangeLog() { }
+
+        public ChangeLog(ChangeLog<I> clone)
+        {
+            ChangeLogId = clone.ChangeLogId;
+            ObjectId = clone.ObjectId;
+            FullTypeName = clone.FullTypeName;
+            PropertySystemType = clone.PropertySystemType;
+            Property = clone.Property;
+            Value = clone.Value;
+            ChangedBy = clone.ChangedBy;
+            ChangedUtc = clone.ChangedUtc;
+        }
+
         public Guid? ChangeLogId { get; set; }
         public I? ObjectId { get; set; }
         public string FullTypeName { get; set; }
