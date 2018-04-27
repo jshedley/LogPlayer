@@ -44,14 +44,6 @@ The performance is subject to the hardware running the tests on, the below stats
 > HDD: SAMSUNG MZFLW512HMJP-000MV - 512GB
 
 ### SQL Store
-
-+---------+----------+
-| Name    | Columns  |
-+=========+==========+
-| PRIMARY | - id one |
-|         | - id two |
-+---------+----------+
-
 | Test | Execution Time |
 | ------------ | ------------ |
 | Inserting 1000 into store | 34ms |
